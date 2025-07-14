@@ -1,20 +1,7 @@
-// import Header from '@/components/general/Header'
-// import React from 'react'
-
-// export default function page() {
-//   return (
-//     <div>
-//       <Header/>
-
-//     </div>
-//   )
-// }
-
 "use client";
 import React from "react";
 import Image from "next/image";
-import Header from "@/components/general/Header";
-// import { Mail, MapPin, Phone, Clock } from "lucide-react";
+import Header from "@/components/general/Header"; 
 
 export default function ContactPage() {
   return (
