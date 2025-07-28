@@ -1,10 +1,19 @@
-import Header from "@/components/general/Header";
+"use client";
+import React from "react";
 import PetCard from "@/components/general/PetCard";
 import SearchFilter from "@/components/general/SearchFilter";
 import Wrapper from "@/components/general/Wrapper";
-import React from "react";
 
 const datas = [
+  {
+    id: 1,
+    title: "Luna",
+    category: "Golden Retriever",
+    age: "2 years",
+    description:
+      "Luna is a friendly and energetic dog who loves playing fetch and going on long",
+    image: "/images/dog-1.jpeg",
+  },
   {
     id: 2,
     title: "Mittens",
@@ -15,16 +24,6 @@ const datas = [
     image: "/images/cat-1.jpeg",
   },
   {
-    id: 1,
-    title: "Luna",
-    category: "Golden Retriever",
-    age: "2 years",
-    description:
-      "Luna is a friendly and energetic dog who loves playing fetch and going on long",
-    image: "/images/dog-1.jpeg",
-  },
-  
-  {
     id: 3,
     title: "Charlie",
     category: "Labrador Mix",
@@ -32,15 +31,6 @@ const datas = [
     description:
       "Charlie is a loyal companion who's great with kids and other pets.",
     image: "/images/dog-2.jpeg",
-  },
-  {
-    id: 5,
-    title: "Max",
-    category: "German Shepherd",
-    age: "4 years",
-    description:
-      "Max is a protective and intelligent dog who would make an excellent guard dog.",
-    image: "/images/max.jpeg",
   },
   {
     id: 4,
@@ -51,12 +41,20 @@ const datas = [
       "Mass is a friendly and energetic dog who loves playing fetch.",
     image: "/images/dog-blue.jpeg",
   },
+  {
+    id: 5,
+    title: "Max",
+    category: "German Shepherd",
+    age: "4 years",
+    description:
+      "Max is a protective and intelligent dog who would make an excellent guard dog.",
+    image: "/images/max.jpeg",
+  },
 ];
 
 export default function page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-blue-50">
-      <Header />
+    <div className="">
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">
           Find Your Perfect Companion

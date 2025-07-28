@@ -15,7 +15,8 @@ export default function SearchFilter({ onSearch }: FilterProps) {
   };
 
   return (
-    <div className="w-full bg-white">
+    // <div className="w-full bg-white">
+    <div className="w-full ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-lg shadow-md p-6 mb-8">
           <div className="flex flex-col md:flex-row gap-4 items-end">

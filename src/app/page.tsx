@@ -3,30 +3,73 @@ import PetCard from "@/components/general/PetCard";
 import SearchFilter from "@/components/general/SearchFilter";
 import SpotlightSection from "@/components/general/SpotlightSection";
 import Image from "next/image";
+import "@/app/globals.css";
+import Wrapper from "@/components/general/Wrapper";
+import HomeBrowse from "@/components/general/HomeBrowse";
+
+// const datas = [
+//   {
+//     id: 1,
+//     title: "Luna",
+//     category: "Golden Retriever",
+//     age: "2 years",
+//     description:
+//       "Luna is a friendly and energetic dog who loves playing fetch and going on long",
+//     image: "/images/dog-1.jpeg",
+//   },
+//   {
+//     id: 2,
+//     title: "Mittens",
+//     category: "Siamese",
+//     age: "1 years",
+//     description:
+//       "Mittens is a playful kitten who loves interactive toys and sunny windowsills.",
+//     image: "/images/cat-1.jpeg",
+//   },
+//   {
+//     id: 3,
+//     title: "Charlie",
+//     category: "Labrador Mix",
+//     age: "5 years",
+//     description:
+//       "Charlie is a loyal companion who's great with kids and other pets.",
+//     image: "/images/dog-2.jpeg",
+//   },
+//   {
+//     id: 4,
+//     title: "Mass",
+//     category: "dogerman",
+//     age: "3 years",
+//     description:
+//       "Mass is a friendly and energetic dog who loves playing fetch.",
+//     image: "/images/dog-blue.jpeg",
+//   },
+//   {
+//     id: 5,
+//     title: "Max",
+//     category: "German Shepherd",
+//     age: "4 years",
+//     description:
+//       "Max is a protective and intelligent dog who would make an excellent guard dog.",
+//     image: "/images/max.jpeg",
+//   },
+// ];
 
 export default function Home() {
   return (
     <div>
-      <Header/>
-      <SpotlightSection/>
-      <SearchFilter/>
-      <PetCard/>
+      <Header />
+      <SpotlightSection />
+      <HomeBrowse/>
+      {/* <Wrapper>
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-8">
+            {datas.map((item) => (
+              <PetCard key={item.id} data={item} />
+            ))}
+          </div>
+        </div>
+      </Wrapper> */}
     </div>
   );
 }
-
-                    //chatGPT
-// import Header from "@/components/general/Header";
-// import SpotlightSection from "@/components/general/SpotlightSection";
-// import Image from "next/image";
-
-// export default function Home() {
-//   return (
-//     <>
-//       <Header />
-//       <main>
-//         <SpotlightSection />
-//       </main>
-//     </>
-//   );
-// }

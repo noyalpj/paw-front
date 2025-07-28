@@ -48,10 +48,14 @@ export default function AdoptionFormPage() {
           <div>
             <h3 className="font-medium mb-2">Personal Information</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <input type="text" name="firstName" placeholder="First Name" value={formData.firstName} onChange={handleChange} className="input" />
+              {/* <input type="text" name="firstName" placeholder="First Name" value={formData.firstName} onChange={handleChange} className="input" />
               <input type="text" name="lastName" placeholder="Last Name" value={formData.lastName} onChange={handleChange} className="input" />
               <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} className="input" />
-              <input type="text" name="phone" placeholder="Phone Number" value={formData.phone} onChange={handleChange} className="input" />
+              <input type="text" name="phone" placeholder="Phone Number" value={formData.phone} onChange={handleChange} className="input" /> */}
+              <input type="text" name="firstName" placeholder="First Name" className="input" />
+              <input type="text" name="lastName" placeholder="Last Name" className="input" />
+              <input type="email" name="email" placeholder="Email" className="input" />
+              <input type="text" name="phone" placeholder="Phone Number" className="input" />
             </div>
           </div>
 
@@ -84,7 +88,7 @@ export default function AdoptionFormPage() {
           </div>
 
           {/* Pet Experience */}
-          <div>
+          {/* <div>
             <h3 className="font-medium mb-2">Pet Experience</h3>
             <textarea
               name="currentPets"
@@ -126,7 +130,7 @@ export default function AdoptionFormPage() {
               onChange={handleChange}
               className="textarea"
             />
-          </div>
+          </div> */}
 
           {/* Buttons */}
           <div className="flex justify-between pt-4">
