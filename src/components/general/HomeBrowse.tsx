@@ -54,8 +54,8 @@ const datas = [
 
 export default function page() {
   return (
-    <div className="">
-      <div className="text-center mb-12">
+    <div className="mb-12">
+      <div className="text-center mb-12 mt-12">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">
           Find Your Perfect Companion
         </h2>
