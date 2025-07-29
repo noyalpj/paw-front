@@ -1,5 +1,6 @@
 'use client';
 
+import Header from '@/components/general/Header';
 import { useState } from 'react';
 
 export default function AdoptionFormPage() {
@@ -14,14 +15,14 @@ export default function AdoptionFormPage() {
     zip: '',
     housingType: '',
     ownership: '',
-    landlordApproval: false,
-    hasYard: false,
-    yardFenced: false,
-    currentPets: '',
-    experience: '',
-    schedule: '',
-    reason: '',
-    references: '',
+    // landlordApproval: false,
+    // hasYard: false,
+    // yardFenced: false,
+    // currentPets: '',
+    // experience: '',
+    // schedule: '',
+    // reason: '',
+    // references: '',
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -39,9 +40,21 @@ export default function AdoptionFormPage() {
   };
 
   return (
-    <main className="max-w-3xl mx-auto py-10 px-6">
-      <div className="bg-white shadow-md rounded-md p-6 border">
-        <h2 className="text-lg font-semibold mb-6">Pet Adoption Application</h2>
+    <div className='min-h-screen bg-gradient-to-br from-orange-50 to-blue-50'>
+      <Header/>
+      <div className="text-center mb-5 mt-12">
+        <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          Adoption Application
+        </h2>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          Help us find the perfect match for you and your new companion
+        </p>
+      </div>
+    <div className="max-w-3xl mx-auto py-10 px-6">
+      
+      <div className="bg-white shadow-md rounded-md p-6 ">
+        {/* <h2 className="text-lg font-semibold mb-6">Pet Adoption Application</h2> */}
+        <h2 className="text-2xl font-bold text-gray-700 mb-6">Pet Adoption Application</h2>
         <form onSubmit={handleSubmit} className="space-y-6">
 
           {/* Personal Info */}
@@ -52,36 +65,46 @@ export default function AdoptionFormPage() {
               <input type="text" name="lastName" placeholder="Last Name" value={formData.lastName} onChange={handleChange} className="input" />
               <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} className="input" />
               <input type="text" name="phone" placeholder="Phone Number" value={formData.phone} onChange={handleChange} className="input" /> */}
-              <input type="text" name="firstName" placeholder="First Name" className="input" />
-              <input type="text" name="lastName" placeholder="Last Name" className="input" />
-              <input type="email" name="email" placeholder="Email" className="input" />
-              <input type="text" name="phone" placeholder="Phone Number" className="input" />
+              <input type="text" name="firstName" placeholder="First Name" className="input rounded border-1 p-1" />
+              <input type="text" name="lastName" placeholder="Last Name" className="input rounded border-1 p-1" />
+              <input type="email" name="email" placeholder="Email" className="input rounded border-1 p-1" />
+              <input type="text" name="phone" placeholder="Phone Number" className="input rounded border-1 p-1" />
             </div>
           </div>
 
           {/* Housing Info */}
           <div>
             <h3 className="font-medium mb-2">Housing Information</h3>
-            <input type="text" name="address" placeholder="Address" value={formData.address} onChange={handleChange} className="input w-full" />
+            {/* <input type="text" name="address" placeholder="Address" value={formData.address} onChange={handleChange} className="input w-full" /> */}
+            <input type="text" name="address" placeholder="Address"className="input w-full  rounded border p-1" />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
-              <input type="text" name="city" placeholder="City" value={formData.city} onChange={handleChange} className="input" />
+              {/* <input type="text" name="city" placeholder="City" value={formData.city} onChange={handleChange} className="input" />
               <input type="text" name="state" placeholder="State" value={formData.state} onChange={handleChange} className="input" />
               <input type="text" name="zip" placeholder="Zip Code" value={formData.zip} onChange={handleChange} className="input" />
-              <input type="text" name="housingType" placeholder="House, Apartment, Condo, etc." value={formData.housingType} onChange={handleChange} className="input" />
+              <input type="text" name="housingType" placeholder="House, Apartment, etc." value={formData.housingType} onChange={handleChange} className="input" /> */}
+              
+              <input type="text" name="city" placeholder="City" className="input  rounded border-1 p-1" />
+              <input type="text" name="state" placeholder="State" className="input  rounded border-1 p-1" />
+              <input type="text" name="zip" placeholder="Zip Code" className="input  rounded border-1 p-1" />
+              <input type="text" name="housingType" placeholder="House, Apartment, etc." className="input  rounded border-1 p-1" />
             </div>
-            <input type="text" name="ownership" placeholder="Own/Rent" value={formData.ownership} onChange={handleChange} className="input w-full mt-2" />
+            {/* <input type="text" name="ownership" placeholder="Own/Rent" value={formData.ownership} onChange={handleChange} className="input w-full mt-2" /> */}
+            <input type="text" name="ownership" placeholder="Own/Rent" className="input w-full mt-2 rounded border-1 p-1" />
 
             <div className="mt-3 space-y-2 text-sm">
               <label className="flex gap-2 items-center">
-                <input type="checkbox" name="landlordApproval" checked={formData.landlordApproval} onChange={handleChange} />
+                {/* <input type="checkbox" name="landlordApproval" checked={formData.landlordApproval} onChange={handleChange} /> */}
+                <input type="checkbox" name="landlordApproval" />
                 If renting, do you have landlord approval for pets?
               </label>
               <label className="flex gap-2 items-center">
-                <input type="checkbox" name="hasYard" checked={formData.hasYard} onChange={handleChange} />
+                {/* <input type="checkbox" name="hasYard" checked={formData.hasYard} onChange={handleChange} /> */}
+                <input type="checkbox" name="hasYard" />
                 Do you have a yard?
               </label>
               <label className="flex gap-2 items-center">
-                <input type="checkbox" name="yardFenced" checked={formData.yardFenced} onChange={handleChange} />
+                {/* <input type="checkbox" name="yardFenced" checked={formData.yardFenced} onChange={handleChange} /> */}
+                <input type="checkbox" name="yardFenced" />
                 Is your yard fenced?
               </label>
             </div>
@@ -149,6 +172,7 @@ export default function AdoptionFormPage() {
           </div>
         </form>
       </div>
-    </main>
+    </div>
+    </div>
   );
 }

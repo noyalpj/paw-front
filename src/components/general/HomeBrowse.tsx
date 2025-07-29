@@ -56,7 +56,7 @@ export default function page() {
   return (
     <div className="mb-12">
       <div className="text-center mb-12 mt-12">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">
+        <h2 className="text-4xl font-bold text-gray-900 mb-4">
           Find Your Perfect Companion
         </h2>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">

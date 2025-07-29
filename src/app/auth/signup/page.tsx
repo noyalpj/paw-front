@@ -13,7 +13,7 @@ export default function SignUp() {
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-blue-50">
       <Header />
 
-      <div className="flex items-center justify-center min-h-[calc(100vh-80px)] px-4">
+      <div className="flex items-center justify-center min-h-[calc(100vh-80px)] px-4 mt-7 pb-7">
         <div className="w-full max-w-md">
           <div className="text-center mb-8">
             <Image

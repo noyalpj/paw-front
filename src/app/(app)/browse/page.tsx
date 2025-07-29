@@ -1,5 +1,6 @@
 import Header from "@/components/general/Header";
 import PetCard from "@/components/general/PetCard";
+import PetDetails from "@/components/general/PetDetails";
 import SearchFilter from "@/components/general/SearchFilter";
 import Wrapper from "@/components/general/Wrapper";
 import React from "react";
@@ -55,14 +56,14 @@ const datas = [
 
 export default function page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-blue-50">
+    <div className="pb-12 min-h-screen bg-gradient-to-br from-orange-50 to-blue-50">
       <Header />
       <div className="text-center mb-12 mt-12">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">
           Find Your Perfect Companion
         </h2>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Browse through our wonderful pets waiting for their forever homes
+          Find your perfect companion from our extensive collection of pets looking for their forever homes.
         </p>
       </div>
       <SearchFilter />
@@ -76,6 +77,7 @@ export default function page() {
           </div>
         </div>
       </Wrapper>
+      <PetDetails/>
     </div>
   );
 }

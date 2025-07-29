@@ -18,9 +18,9 @@ export default function PetDetails() {
             height={400}
             className="rounded-lg shadow"
           />
-          <span className="absolute top-4 right-4 bg-red-500 text-white text-xs px-3 py-1 rounded-full">
+          {/* <span className="absolute top-4 right-4 bg-red-500 text-white text-xs px-3 py-1 rounded-full">
             Urgent
-          </span>
+          </span> */}
         </div>
 
         <div>
@@ -52,7 +52,7 @@ export default function PetDetails() {
         </div>
       </div>
 
-      {/* About Luna */}
+      {/* About */}
       <div className="grid md:grid-cols-3 gap-6 mt-10">
         <div className="bg-white p-6 rounded-lg shadow md:col-span-2">
           <h2 className="text-lg font-semibold mb-2">About Luna</h2>
@@ -92,10 +92,10 @@ export default function PetDetails() {
               <span>Spayed/Neutered</span>
               <span className="bg-green-100 text-green-600 px-2 rounded-full text-xs">Yes</span>
             </li>
-            <li className="flex justify-between">
+            {/* <li className="flex justify-between">
               <span>Microchipped</span>
               <span className="bg-green-100 text-green-600 px-2 rounded-full text-xs">Yes</span>
-            </li>
+            </li> */}
           </ul>
         </div>
 
