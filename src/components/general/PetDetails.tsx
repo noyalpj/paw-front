@@ -1,10 +1,11 @@
 "use client";
 import Image from "next/image";
-// import { Heart } from "lucide-react";
+import Header from "./Header";
 
-export default function PetDetails() {
+export default function PetDetails({ pet }: any) {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
+      {/* <Header/> */}
       <a href="/browse" className="text-orange-600 flex items-center mb-4 text-sm">
         <span className="mr-1 text-lg">←</span> Back to Browse Pets
       </a>
@@ -12,38 +13,35 @@ export default function PetDetails() {
       <div className="grid md:grid-cols-2 gap-10">
         <div className="relative">
           <Image
-            src="/images/luna.jpg"
-            alt="Luna"
+            src={pet.image}
+            alt={pet.title}
             width={600}
             height={400}
             className="rounded-lg shadow"
           />
-          {/* <span className="absolute top-4 right-4 bg-red-500 text-white text-xs px-3 py-1 rounded-full">
-            Urgent
-          </span> */}
         </div>
 
         <div>
           <div className="flex justify-between items-start">
             <div>
-              <h1 className="text-2xl font-bold">Luna</h1>
-              <p className="text-gray-500">Golden Retriever</p>
-              <p className="text-sm text-gray-600 mt-1">🏠 Happy Paws Shelter</p>
+              <h1 className="text-2xl font-bold">{pet.title}</h1>
+              <p className="text-gray-500">{pet.category}</p>
+              <p className="text-sm text-gray-600 mt-1">🏠 {pet.shelter.name}</p>
               <div className="flex gap-4 mt-3 text-sm text-gray-600">
-                <span>🐶 2 years</span>
-                <span>⚖️ 65 lbs</span>
-                <span>📏 Large</span>
-                <span>♀️ Female</span>
+                <span>🐶 {pet.age}</span>
+                <span>⚖️ {pet.weight}</span>
+                <span>📏 {pet.size}</span>
+                <span>{pet.gender === "Female" ? "♀️ Female" : "♂️ Male"}</span>
               </div>
             </div>
             <button className="border rounded-md p-2 hover:bg-gray-100">
-              {/* <Heart className="w-5 h-5 text-red-500" /> */}
+              {/* Favorite Icon can go here */}
             </button>
           </div>
 
           <div className="bg-gray-50 rounded-lg shadow mt-6 p-4">
             <p className="text-sm text-gray-500">Adoption Fee</p>
-            <p className="text-2xl font-bold text-orange-600 mt-1">$150</p>
+            <p className="text-2xl font-bold text-orange-600 mt-1">${pet.fee}</p>
           </div>
 
           <button className="mt-4 w-full bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded-md">
@@ -55,27 +53,33 @@ export default function PetDetails() {
       {/* About */}
       <div className="grid md:grid-cols-3 gap-6 mt-10">
         <div className="bg-white p-6 rounded-lg shadow md:col-span-2">
-          <h2 className="text-lg font-semibold mb-2">About Luna</h2>
-          <p className="text-sm text-gray-700 mb-4">
-            Luna is a friendly and energetic dog who loves playing fetch and going on long walks.
-            She's great with children and other dogs, making her the perfect family companion. Luna
-            is house-trained and knows basic commands like sit, stay, and come.
-          </p>
+          <h2 className="text-lg font-semibold mb-2">About {pet.title}</h2>
+          <p className="text-sm text-gray-700 mb-4">{pet.description}</p>
 
           <div className="grid grid-cols-2 md:grid-cols-3 text-sm">
             <div>
               <p className="font-semibold">Good with:</p>
               <ul className="list-disc pl-4">
-                <li className="text-green-600">Children</li>
-                <li className="text-green-600">Dogs</li>
-                <li className="text-red-500">Cats</li>
+                {pet.goodWith.map((g: string, i: number) => (
+                  <li key={i} className="text-green-600">{g}</li>
+                ))}
+                {pet.notGoodWith.length > 0 &&
+                  pet.notGoodWith.map((g: string, i: number) => (
+                    <li key={i} className="text-red-500">{g}</li>
+                  ))}
               </ul>
             </div>
             <div>
               <p className="font-semibold">Care Details:</p>
-              <p>Energy Level: <span className="font-medium">High</span></p>
-              <p>Training: <span className="font-medium">Basic commands</span></p>
-              <p>Special Needs: <span className="font-medium">None</span></p>
+              <p>
+                Energy Level: <span className="font-medium">{pet.energyLevel}</span>
+              </p>
+              <p>
+                Training: <span className="font-medium">{pet.training}</span>
+              </p>
+              <p>
+                Special Needs: <span className="font-medium">{pet.specialNeeds}</span>
+              </p>
             </div>
           </div>
         </div>
@@ -86,16 +90,16 @@ export default function PetDetails() {
           <ul className="text-sm space-y-2">
             <li className="flex justify-between">
               <span>Vaccinated</span>
-              <span className="bg-green-100 text-green-600 px-2 rounded-full text-xs">Yes</span>
+              <span className="bg-green-100 text-green-600 px-2 rounded-full text-xs">
+                {pet.vaccinated ? "Yes" : "No"}
+              </span>
             </li>
             <li className="flex justify-between">
               <span>Spayed/Neutered</span>
-              <span className="bg-green-100 text-green-600 px-2 rounded-full text-xs">Yes</span>
+              <span className="bg-green-100 text-green-600 px-2 rounded-full text-xs">
+                {pet.spayed ? "Yes" : "No"}
+              </span>
             </li>
-            {/* <li className="flex justify-between">
-              <span>Microchipped</span>
-              <span className="bg-green-100 text-green-600 px-2 rounded-full text-xs">Yes</span>
-            </li> */}
           </ul>
         </div>
 
@@ -103,9 +107,9 @@ export default function PetDetails() {
         <div className="bg-white p-6 rounded-lg shadow md:col-span-3 md:flex md:justify-between">
           <div>
             <h2 className="text-lg font-semibold mb-2">Shelter Contact</h2>
-            <p className="text-sm text-gray-700">📞 (555) 123-4567</p>
-            <p className="text-sm text-gray-700">📧 adopt@happypaws.org</p>
-            <p className="text-sm text-gray-700">📍 123 Pet Street, Animal City, AC 12345</p>
+            <p className="text-sm text-gray-700">📞 {pet.shelter.phone}</p>
+            <p className="text-sm text-gray-700">📧 {pet.shelter.email}</p>
+            <p className="text-sm text-gray-700">📍 {pet.shelter.address}</p>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 
 // PetCard.tsx
 export default function PetCard({ data }: any) {
@@ -38,9 +39,12 @@ export default function PetCard({ data }: any) {
           <button className="flex-1 bg-orange-500 hover:bg-orange-600 text-white text-sm font-medium px-3 py-2 rounded-md">
             Adopt Me
           </button>
-          <button className="flex-1 border border-orange-500 text-orange-600 text-sm font-medium px-3 py-2 rounded-md hover:bg-orange-50">
+          <Link
+            href={`/pets/${data?.id}`}
+            className="flex-1 border border-orange-500 text-orange-600 text-sm font-medium px-3 py-2 rounded-md hover:bg-orange-50 text-center"
+          >
             Details
-          </button>
+          </Link>
         </div>
       </div>
     </div>

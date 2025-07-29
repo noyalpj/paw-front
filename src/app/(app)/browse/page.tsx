@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Header from "@/components/general/Header";
 import PetCard from "@/components/general/PetCard";
-import PetDetails from "@/components/general/PetDetails";
 import SearchFilter from "@/components/general/SearchFilter";
 import Wrapper from "@/components/general/Wrapper";
 
@@ -115,8 +114,6 @@ export default function Page() {
           </div>
         </div>
       </Wrapper>
-
-      <PetDetails />
     </div>
   );
 }
