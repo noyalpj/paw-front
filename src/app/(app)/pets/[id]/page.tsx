@@ -100,7 +100,7 @@ const pets = [
     specialNeeds: "None",
     vaccinated: true,
     spayed: true,
-    image: "/images/max.jpeg",
+    image: "/images/dog-blue.jpeg",
     shelter: {
       name: "Happy Paws Shelter",
       phone: "(555) 123-4567",
@@ -126,7 +126,7 @@ const pets = [
     specialNeeds: "None",
     vaccinated: true,
     spayed: true,
-    image: "/images/dog-blue.jpeg",
+    image: "/images/max.jpeg",
     shelter: {
       name: "Happy Paws Shelter",
       phone: "(555) 123-4567",

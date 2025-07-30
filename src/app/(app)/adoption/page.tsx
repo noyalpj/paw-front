@@ -61,10 +61,10 @@ export default function AdoptionFormPage() {
           <div>
             <h3 className="font-medium mb-2">Personal Information</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {/* <input type="text" name="firstName" placeholder="First Name" value={formData.firstName} onChange={handleChange} className="input" />
-              <input type="text" name="lastName" placeholder="Last Name" value={formData.lastName} onChange={handleChange} className="input" />
-              <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} className="input" />
-              <input type="text" name="phone" placeholder="Phone Number" value={formData.phone} onChange={handleChange} className="input" /> */}
+              {/* <input type="text" name="firstName" placeholder="First Name" value={formData.firstName} onChange={handleChange} className="input rounded border border-gray-400 p-1"  />
+              <input type="text" name="lastName" placeholder="Last Name" value={formData.lastName} onChange={handleChange} className="input rounded border border-gray-400 p-1"  />
+              <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} className="input rounded border border-gray-400 p-1"  />
+              <input type="text" name="phone" placeholder="Phone Number" value={formData.phone} onChange={handleChange} className="input rounded border border-gray-400 p-1"  /> */}
               <input type="text" name="firstName" placeholder="First Name" className="input rounded border border-gray-400 p-1" />
               <input type="text" name="lastName" placeholder="Last Name" className="input rounded border border-gray-400 p-1" />
               <input type="email" name="email" placeholder="Email" className="input rounded border border-gray-400 p-1" />
@@ -75,20 +75,20 @@ export default function AdoptionFormPage() {
           {/* Housing Info */}
           <div>
             <h3 className="font-medium mb-2">Housing Information</h3>
-            {/* <input type="text" name="address" placeholder="Address" value={formData.address} onChange={handleChange} className="input w-full" /> */}
+            {/* <input type="text" name="address" placeholder="Address" value={formData.address} onChange={handleChange} className="input w-full rounded border border-gray-400 p-1" /> */}
             <input type="text" name="address" placeholder="Address"className="input w-full rounded border border-gray-400 p-1" />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
-              {/* <input type="text" name="city" placeholder="City" value={formData.city} onChange={handleChange} className="input" />
-              <input type="text" name="state" placeholder="State" value={formData.state} onChange={handleChange} className="input" />
-              <input type="text" name="zip" placeholder="Zip Code" value={formData.zip} onChange={handleChange} className="input" />
-              <input type="text" name="housingType" placeholder="House, Apartment, etc." value={formData.housingType} onChange={handleChange} className="input" /> */}
+              {/* <input type="text" name="city" placeholder="City" value={formData.city} onChange={handleChange} className="input rounded border border-gray-400 p-1" />
+              <input type="text" name="state" placeholder="State" value={formData.state} onChange={handleChange} className="input rounded border border-gray-400 p-1" />
+              <input type="text" name="zip" placeholder="Zip Code" value={formData.zip} onChange={handleChange} className="input rounded border border-gray-400 p-1" />
+              <input type="text" name="housingType" placeholder="House, Apartment, etc." value={formData.housingType} onChange={handleChange} className="input rounded border border-gray-400 p-1" /> */}
               
               <input type="text" name="city" placeholder="City" className="input rounded border border-gray-400 p-1" />
               <input type="text" name="state" placeholder="State" className="input rounded border border-gray-400 p-1" />
               <input type="text" name="zip" placeholder="Zip Code" className="input rounded border border-gray-400 p-1" />
               <input type="text" name="housingType" placeholder="House, Apartment, etc." className="input rounded border border-gray-400 p-1" />
             </div>
-            {/* <input type="text" name="ownership" placeholder="Own/Rent" value={formData.ownership} onChange={handleChange} className="input w-full mt-2" /> */}
+            {/* <input type="text" name="ownership" placeholder="Own/Rent" value={formData.ownership} onChange={handleChange} className="input w-full mt-2 rounded border border-gray-400 p-1" /> */}
             <input type="text" name="ownership" placeholder="Own/Rent" className="input w-full mt-2 rounded border border-gray-400 p-1" />
 
             <div className="mt-3 space-y-2 text-sm">
@@ -102,58 +102,8 @@ export default function AdoptionFormPage() {
                 <input type="checkbox" name="hasYard" />
                 Do you have a yard?
               </label>
-              {/* <label className="flex gap-2 items-center"> */}
-                {/* <input type="checkbox" name="yardFenced" checked={formData.yardFenced} onChange={handleChange} /> */}
-                {/* <input type="checkbox" name="yardFenced" />
-                Is your yard fenced?
-              </label> */}
             </div>
           </div>
-
-          {/* Pet Experience */}
-          {/* <div>
-            <h3 className="font-medium mb-2">Pet Experience</h3>
-            <textarea
-              name="currentPets"
-              rows={2}
-              placeholder="List any current pets, their ages, breeds, and how they get along with other animals"
-              value={formData.currentPets}
-              onChange={handleChange}
-              className="textarea"
-            />
-            <textarea
-              name="experience"
-              rows={2}
-              placeholder="Tell us about your previous experience caring for pets"
-              value={formData.experience}
-              onChange={handleChange}
-              className="textarea"
-            />
-            <textarea
-              name="schedule"
-              rows={2}
-              placeholder="Describe your typical daily schedule and how much time you can dedicate to a pet"
-              value={formData.schedule}
-              onChange={handleChange}
-              className="textarea"
-            />
-            <textarea
-              name="reason"
-              rows={2}
-              placeholder="Tell us what drew you to this particular pet and what you hope to provide"
-              value={formData.reason}
-              onChange={handleChange}
-              className="textarea"
-            />
-            <textarea
-              name="references"
-              rows={2}
-              placeholder="Please provide names and contact information for 2-3 references (veterinarian, previous landlord, etc.)"
-              value={formData.references}
-              onChange={handleChange}
-              className="textarea"
-            />
-          </div> */}
 
           {/* Buttons */}
           <div className="flex justify-between pt-4">
